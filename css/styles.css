@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #455A64;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  color: #FFF;
+  font-weight: 800;
+}
+
+h1 img {
+  width: 80px;
+}
+
+input {
+  color: #666666;
+}
+
+input::placeholder {
+  color: rgba(181, 183, 185, 1);
+}
+
+button {
+  color: #FFF;
+}
+
+#left {
+
+}
+
+#input-submit {
+  background-color: #FFC107;
+}
+
+#input-submit:hover {
+  background-color: #FFD773;
+}
+
+#right {
+  background-color: #CFD8DC;
+}
