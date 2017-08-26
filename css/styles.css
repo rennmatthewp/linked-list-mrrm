@@ -71,6 +71,7 @@ button {
 a {
   display: block;
   margin: 20px 0;
+  overflow-wrap: break-word;
 
 }
 
@@ -123,7 +124,7 @@ a:hover, h5:hover {
 .bookmark-card {
   background-color: #FFF;
   border: 1px solid #607D8B;
-  margin: 17px;
+  margin: 23px 17px;
   padding: 10px 15px 7px;
 }
 
