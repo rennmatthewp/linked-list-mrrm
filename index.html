@@ -14,8 +14,8 @@
           <h1>Linked<img src="assets/linked-list-logo.svg" alt="linked list logo">List</h1>
           <form class="" action="index.html" method="post">
             <fieldset>
-              <input id="input-title" type="text" name="" value="" placeholder="Website Title">
-              <input id="input-url" type="text" name="" value="" placeholder="Website URL">
+              <input id="input-title" type="text" name="" value="" placeholder="Website Title" required>
+              <input id="input-url" type="url" name="" value="" placeholder="Website URL" required>
               <button id="input-submit" type="submit" name="button">Enter</button>
             </fieldset>
           </form>
@@ -23,12 +23,12 @@
       </section>
       <section id="right">
         <article class="bookmark-card">
-          <h3 id="bookmark-title">The Website Title</h3>
+          <h3 class="bookmark-title">The Website Title</h3>
           <hr>
-          <a type="url" id="bookmark-url" href="#">www.thewebsiteurl.com</a>
+          <a type="url" class="bookmark-url" href="#">www.thewebsiteurl.com</a>
           <hr>
-          <h5 id="read-button">Read</h5>
-          <h5 id="delete-button">Delete</h5>
+          <h5 class="read-button">Read</h5>
+          <h5 class="delete-button">Delete</h5>
         </article>
       </section>
     </main>
