@@ -7,6 +7,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+main {
+  display: block;
+  max-width: 1000px;
+  margin: auto;
+}
+
 h1 {
   color: #FFF;
   font-weight: 800;
@@ -16,8 +22,25 @@ h1 img {
   width: 80px;
 }
 
+h3 {
+  color: #455A64;
+  font-weight: 800;
+}
+
+h5 {
+  color: #455A64;
+  font-weight: 400;
+  display: inline-block;
+}
+
+hr {
+  color: #CFD8DC;
+}
+
 input {
-  color: #666666;
+  color: #666;
+  display: block;
+  width: 100%;
 }
 
 input::placeholder {
@@ -26,10 +49,30 @@ input::placeholder {
 
 button {
   color: #FFF;
+  display: block;
+  width: 100%;
+}
+
+a, h5 {
+  color: #607D8B;
+  font-weight: 400;
+  text-decoration: underline #F2F4F4;
+}
+
+a:hover, h5:hover {
+  color: #455A64;
+  font-weight: 800;
+  text-decoration: underline #FFC107;
+}
+
+.read {
+  background-color: #F2F4F4;
+  text-decoration: underline #CFD8DC;
 }
 
 #left {
-
+  display: inline-block;
+  width: 49%;
 }
 
 #input-submit {
@@ -41,5 +84,27 @@ button {
 }
 
 #right {
+  display: inline-block;
   background-color: #CFD8DC;
+  width: 49%;
+}
+
+#delete-button {
+  float: right;
+}
+
+.read-button {
+  color: #F05A28;
+}
+
+.bookmark-card {
+  background-color: #FFF;
+  border: 1px solid #607D8B;
+  margin: 10px;
+  padding: 5px 10px;
+}
+
+.home-screen {
+  width: 500px;
+  padding: 20px;
 }
