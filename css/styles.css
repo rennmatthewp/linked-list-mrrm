@@ -9,17 +9,21 @@ body {
 
 main {
   display: block;
-  max-width: 1000px;
+  max-width: 936px;
   margin: auto;
 }
 
 h1 {
   color: #FFF;
   font-weight: 800;
+  font-size: 56px;
 }
 
 h1 img {
-  width: 80px;
+  width: 95px;
+  position: relative;
+  margin: 0 15px;
+  top: 2px;
 }
 
 h3 {
@@ -40,17 +44,25 @@ hr {
 input {
   color: #666;
   display: block;
+  font-size: 24px;
+  padding: 4px 10px;
+  margin: 50px 0;
   width: 100%;
 }
 
 input::placeholder {
   color: rgba(181, 183, 185, 1);
+  letter-spacing: 1.5px;
 }
 
 button {
   color: #FFF;
   display: block;
   width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 800;
+  border: none;
 }
 
 a, h5 {
@@ -104,7 +116,8 @@ a:hover, h5:hover {
   padding: 5px 10px;
 }
 
-.home-screen {
-  width: 500px;
+.homestar {
+  margin: 100px 0;
+  width: 468px;
   padding: 20px;
 }
