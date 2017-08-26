@@ -9,7 +9,7 @@ body {
 
 main {
   display: block;
-  max-width: 936px;
+  max-width: 959px;
   margin: auto;
 }
 
@@ -29,12 +29,15 @@ h1 img {
 h3 {
   color: #455A64;
   font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 h5 {
   color: #455A64;
   font-weight: 400;
   display: inline-block;
+  font-size: 14px;
 }
 
 hr {
@@ -65,6 +68,12 @@ button {
   border: none;
 }
 
+a {
+  display: block;
+  margin: 20px 0;
+
+}
+
 a, h5 {
   color: #607D8B;
   font-weight: 400;
@@ -84,7 +93,7 @@ a:hover, h5:hover {
 
 #left {
   display: inline-block;
-  width: 49%;
+  width: 49.56%;
 }
 
 #input-submit {
@@ -98,7 +107,9 @@ a:hover, h5:hover {
 #right {
   display: inline-block;
   background-color: #CFD8DC;
-  width: 49%;
+  width: 50%;
+  vertical-align: top;
+  height: 100vh;
 }
 
 #delete-button {
@@ -112,8 +123,8 @@ a:hover, h5:hover {
 .bookmark-card {
   background-color: #FFF;
   border: 1px solid #607D8B;
-  margin: 10px;
-  padding: 5px 10px;
+  margin: 17px;
+  padding: 10px 15px 7px;
 }
 
 .homestar {
