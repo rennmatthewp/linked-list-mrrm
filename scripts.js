@@ -31,12 +31,7 @@ function enableButton() {
 	var formValidity = document.querySelector('#input-form').checkValidity();
 	if (formValidity === true) {
 		document.querySelector('#input-submit').disabled = false
-	};
-}
-
-function disableButton() {
-	var formValidity = document.querySelector('#input-form').checkValidity();
-	if (formValidity === false) {
+	} else if (formValidity === false) {
 		document.querySelector('#input-submit').disabled = true
 	};
 }
@@ -50,7 +45,6 @@ function clearFields() {
 
 document.querySelector('#input-form').addEventListener('input', function() {
 	enableButton();
-	disableButton();
 });
 
 document.querySelector('#input-form').addEventListener('submit', function(e) {
