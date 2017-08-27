@@ -13,6 +13,11 @@ main {
   max-width: 959px;
 }
 
+section {
+  display: inline-block;
+  height: 100vh;
+}
+
 h1 {
   color: #FFF;
   font-size: 56px;
@@ -87,8 +92,10 @@ a:hover, h5:hover {
 }
 
 .homestar {
-  margin: 100px 0;
   padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 468px;
 }
 
@@ -114,8 +121,13 @@ a:hover, h5:hover {
 }
 
 #left {
-  display: inline-block;
   width: 49.56%;
+}
+
+#right {
+  background-color: #CFD8DC;
+  vertical-align: top;
+  width: 50%;
 }
 
 #input-submit {
@@ -128,12 +140,4 @@ a:hover, h5:hover {
 
 #input-submit:disabled {
   background-color: #CFD8DC;
-}
-
-#right {
-  background-color: #CFD8DC;
-  display: inline-block;
-  height: 100vh;
-  vertical-align: top;
-  width: 50%;
 }

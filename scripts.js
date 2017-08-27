@@ -34,6 +34,13 @@ function enableButton() {
 	};
 }
 
+function disableButton() {
+	var formValidity = document.querySelector('#input-form').checkValidity();
+	if (formValidity === false) {
+		document.querySelector('#input-submit').disabled = true
+	};
+}
+
 function clearFields() {
 	document.querySelector('#input-title').value = '';
 	document.querySelector('#input-url').value = '';
@@ -43,6 +50,7 @@ function clearFields() {
 
 document.querySelector('#input-form').addEventListener('input', function() {
 	enableButton();
+	disableButton();
 });
 
 document.querySelector('#input-form').addEventListener('submit', function(e) {
