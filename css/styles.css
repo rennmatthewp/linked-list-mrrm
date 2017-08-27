@@ -9,35 +9,35 @@ body {
 
 main {
   display: block;
-  max-width: 959px;
   margin: auto;
+  max-width: 959px;
 }
 
 h1 {
   color: #FFF;
-  font-weight: 800;
   font-size: 56px;
+  font-weight: 800;
 }
 
 h1 img {
-  width: 95px;
-  position: relative;
   margin: 0 15px;
+  position: relative;
   top: 2px;
+  width: 95px;
 }
 
 h3 {
   color: #455A64;
-  font-weight: 800;
   font-size: 24px;
+  font-weight: 800;
   margin-bottom: 10px;
 }
 
 h5 {
   color: #455A64;
-  font-weight: 400;
   display: inline-block;
   font-size: 14px;
+  font-weight: 400;
 }
 
 hr {
@@ -48,8 +48,8 @@ input {
   color: #666;
   display: block;
   font-size: 24px;
-  padding: 4px 10px;
   margin: 50px 0;
+  padding: 4px 10px;
   width: 100%;
 }
 
@@ -60,31 +60,52 @@ input::placeholder {
 
 button {
   color: #FFF;
+  border: none;
   display: block;
-  width: 100%;
-  padding: 8px;
   font-size: 16px;
   font-weight: 800;
-  border: none;
+  padding: 8px;
+  width: 100%;
 }
 
 a {
   display: block;
   margin: 20px 0;
   overflow-wrap: break-word;
-
 }
 
 a, h5 {
   color: #607D8B;
-  font-weight: 400;
   text-decoration: underline #F2F4F4;
+  font-weight: 400;
 }
 
 a:hover, h5:hover {
   color: #455A64;
   font-weight: 800;
   text-decoration: underline #FFC107;
+}
+
+.homestar {
+  margin: 100px 0;
+  padding: 20px;
+  width: 468px;
+}
+
+.bookmark-card {
+  background-color: #FFF;
+  border: 1px solid #607D8B;
+  display: none;
+  margin: 23px 17px;
+  padding: 10px 15px 7px;
+}
+
+.delete-button {
+  float: right;
+}
+
+.read-button-clicked {
+  color: #F05A28;
 }
 
 .read {
@@ -105,32 +126,14 @@ a:hover, h5:hover {
   background-color: #FFD773;
 }
 
-#right {
-  display: inline-block;
+#input-submit:disabled {
   background-color: #CFD8DC;
-  width: 50%;
-  vertical-align: top;
+}
+
+#right {
+  background-color: #CFD8DC;
+  display: inline-block;
   height: 100vh;
-}
-
-.delete-button {
-  float: right;
-}
-
-.read-button-clicked {
-  color: #F05A28;
-}
-
-.bookmark-card {
-  background-color: #FFF;
-  border: 1px solid #607D8B;
-  margin: 23px 17px;
-  padding: 10px 15px 7px;
-  display: none;
-}
-
-.homestar {
-  margin: 100px 0;
-  width: 468px;
-  padding: 20px;
+  vertical-align: top;
+  width: 50%;
 }

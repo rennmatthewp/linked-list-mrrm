@@ -9,7 +9,7 @@ function fillCard(bookmarkCardObject) {
 
 	bookmarkTitle.innerText = title.value;
 	bookmarkURL.innerHTML = url.value;
-	// bookmarkURL.setAttribute('href', 'http://' + url.value)
+	bookmarkURL.setAttribute('href', url.value)
 // 	if (bookmarkURL.href.startsWith('http') === true) {
 // 		bookmarkURL.href = url.value
 // 	} else {bookmarkURL.href = 'http://' + url.value;
@@ -27,10 +27,26 @@ function newCard() {
 	section.appendChild(bookmarkCard);
 }
 
+function enableButton() {
+	var formValidity = document.querySelector('#input-form').checkValidity();
+	if (formValidity === true) {
+		document.querySelector('#input-submit').disabled = false
+	};
+}
+
+function clearFields() {
+	document.querySelector('#input-title').value = '';
+	document.querySelector('#input-url').value = '';
+}
+
 //Event Listeners
 
-document.querySelector('#input-form').addEventListener('submit', function() {
-	event.preventDefault();
-	newCard();
+document.querySelector('#input-form').addEventListener('input', function() {
+	enableButton();
 });
 
+document.querySelector('#input-form').addEventListener('submit', function(e) {
+	e.preventDefault();
+	newCard();
+	clearFields();
+});
