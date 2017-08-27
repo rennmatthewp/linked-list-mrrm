@@ -113,11 +113,11 @@ a:hover, h5:hover {
   height: 100vh;
 }
 
-#delete-button {
+.delete-button {
   float: right;
 }
 
-.read-button {
+.read-button-clicked {
   color: #F05A28;
 }
 
@@ -126,6 +126,7 @@ a:hover, h5:hover {
   border: 1px solid #607D8B;
   margin: 23px 17px;
   padding: 10px 15px 7px;
+  display: none;
 }
 
 .homestar {
