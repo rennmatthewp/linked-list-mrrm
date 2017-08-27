@@ -51,4 +51,5 @@ document.querySelector('#input-form').addEventListener('submit', function(e) {
 	e.preventDefault();
 	newCard();
 	clearFields();
+	enableButton();
 });
