@@ -1,7 +1,6 @@
 //Functions
 
 function fillCard(bookmarkCardObject) {
-	// event.preventDefault();
 	var title = document.querySelector('#input-title');
 	var url = document.querySelector('#input-url');
 	var bookmarkTitle = bookmarkCardObject.querySelector('.bookmark-title');
@@ -10,11 +9,6 @@ function fillCard(bookmarkCardObject) {
 	bookmarkTitle.innerText = title.value;
 	bookmarkURL.innerHTML = url.value;
 	bookmarkURL.setAttribute('href', url.value)
-// 	if (bookmarkURL.href.startsWith('http') === true) {
-// 		bookmarkURL.href = url.value
-// 	} else {bookmarkURL.href = 'http://' + url.value;
-// };
-// console.log(bookmarkURL.href);
 }
 
 function newCard() {
@@ -41,9 +35,10 @@ function clearFields() {
 	document.querySelector('#input-url').value = '';
 }
 
+
 //Event Listeners
 
-document.querySelector('#input-form').addEventListener('input', function() {
+document.querySelector('#input-form').addEventListener('input', function() {	
 	enableButton();
 });
 

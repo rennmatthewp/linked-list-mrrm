@@ -69,15 +69,7 @@ input:-webkit-autofill {
 }
 
 
-button {
-  color: #FFF;
-  border: none;
-  display: block;
-  font-size: 16px;
-  font-weight: 800;
-  padding: 8px;
-  width: 100%;
-}
+
 
 a {
   display: block;
@@ -138,12 +130,23 @@ a:hover, h5:hover {
 
 #input-submit {
   background-color: #FFC107;
+  color: rgba(255,255,255, 1);
+  border: none;
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 8px;
+  width: 100%;
+  transition: all 500ms ease;
 }
 
 #input-submit:hover {
   background-color: #FFD773;
+  transition: all 500ms ease;
 }
 
 #input-submit:disabled {
   background-color: #CFD8DC;
+  color: rgba(255,255,255, .3);
+  transition: all 500ms ease;
 }
