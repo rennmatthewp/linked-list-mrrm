@@ -1,20 +1,13 @@
 //Functions
 
 function fillCard(bookmarkCardObject) {
-	// event.preventDefault();
 	var title = document.querySelector('#input-title');
 	var url = document.querySelector('#input-url');
 	var bookmarkTitle = bookmarkCardObject.querySelector('.bookmark-title');
 	var bookmarkURL = bookmarkCardObject.querySelector('.bookmark-url');
-
 	bookmarkTitle.innerText = title.value;
 	bookmarkURL.innerHTML = url.value;
 	bookmarkURL.setAttribute('href', url.value)
-// 	if (bookmarkURL.href.startsWith('http') === true) {
-// 		bookmarkURL.href = url.value
-// 	} else {bookmarkURL.href = 'http://' + url.value;
-// };
-// console.log(bookmarkURL.href);
 }
 
 function newCard() {
@@ -53,3 +46,8 @@ document.querySelector('#input-form').addEventListener('submit', function(e) {
 	clearFields();
 	enableButton();
 });
+
+document.querySelector('#right').addEventListener('click', function(event) {
+	if (event.target.matches('h5.delete-button')) {
+	console.log('clicked')}
+})
