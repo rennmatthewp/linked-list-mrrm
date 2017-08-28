@@ -5,7 +5,6 @@ function fillCard(bookmarkCardObject) {
 	var url = document.querySelector('#input-url');
 	var bookmarkTitle = bookmarkCardObject.querySelector('.bookmark-title');
 	var bookmarkURL = bookmarkCardObject.querySelector('.bookmark-url');
-
 	bookmarkTitle.innerText = title.value;
 	bookmarkURL.innerHTML = url.value;
 	bookmarkURL.setAttribute('href', url.value)
@@ -48,3 +47,9 @@ document.querySelector('#input-form').addEventListener('submit', function(e) {
 	clearFields();
 	enableButton();
 });
+
+document.querySelector('#right').addEventListener('click', function(event) {
+	if (event.target.matches('h5.delete-button')) {
+	console.log('clicked')}
+})
+
