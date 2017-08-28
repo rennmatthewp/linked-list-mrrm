@@ -34,7 +34,6 @@ function clearFields() {
 	document.querySelector('#input-url').value = '';
 }
 
-
 //Event Listeners
 
 document.querySelector('#input-form').addEventListener('input', function() {	
@@ -50,6 +49,13 @@ document.querySelector('#input-form').addEventListener('submit', function(e) {
 
 document.querySelector('#right').addEventListener('click', function(event) {
 	if (event.target.matches('h5.delete-button')) {
-	console.log('clicked')}
+		event.target.parentNode.remove(child);
+	}
+
+	if (event.target.matches('h5.read-button')) {
+		event.target.parentNode.classList.toggle('read');
+		event.target.classList.toggle('read-button-clicked');
+	}
+
 })
 
