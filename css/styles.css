@@ -96,7 +96,16 @@ h5:hover {
   top: 50%;
   transform: translateY(-50%);
   width: 468px;
+  transition: all 800ms ease;
 }
+
+.homestar-onload {
+  top: 30%;
+  position: relative;
+  z-index: 1;
+  transform: translateX(50%);
+  transition: all 800ms ease;
+} 
 
 .bookmark-card {
   background-color: #FFF;
@@ -138,8 +147,12 @@ h5:hover {
 }
 
 
-#left {
+.left {
   width: 49.56%;
+}
+
+.left-onload {
+  width: 100%;
 }
 
 #right {
@@ -172,4 +185,12 @@ h5:hover {
   background-color: #CFD8DC;
   color: rgba(255,255,255, .3);
   transition: all 500ms ease;
+}
+
+@media (max-width: 935px) {
+ .homestar-onload {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+  } 
 }
