@@ -38,11 +38,13 @@ h3 {
   margin-bottom: 10px;
 }
 
+
 h5 {
   color: #455A64;
   display: inline-block;
   font-size: 14px;
   font-weight: 400;
+  cursor: pointer;
 }
 
 hr {
@@ -68,9 +70,6 @@ input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px #FFF inset;
 }
 
-
-
-
 a {
   display: block;
   margin: 20px 0;
@@ -83,7 +82,8 @@ a, h5 {
   font-weight: 400;
 }
 
-a:hover, h5:hover {
+a:hover, 
+h5:hover {
   color: #455A64;
   font-weight: 800;
   text-decoration: underline #FFC107;
@@ -113,10 +113,21 @@ a:hover, h5:hover {
   color: #F05A28;
 }
 
+.read-button-clicked:hover {
+  color: #F05A28;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .read {
   background-color: #F2F4F4;
+}
+
+.read a, 
+.read .delete-button {
   text-decoration: underline #CFD8DC;
 }
+
 
 #left {
   width: 49.56%;
@@ -138,6 +149,7 @@ a:hover, h5:hover {
   padding: 8px;
   width: 100%;
   transition: all 500ms ease;
+  cursor: pointer;
 }
 
 #input-submit:hover {
