@@ -30,7 +30,7 @@ function newCard() {
 	if (document.querySelectorAll('.bookmark-card').length < 3) {
 
 	setTimeout(function() {
-		
+
 	if (document.querySelectorAll('.bookmark-card').length > 2) {
 		setTimeout(function() {
 			bookmarkCard.classList.add('bookmark-fade');
@@ -75,9 +75,43 @@ function clearFields() {
 	document.querySelector('#input-url').value = '';
 }
 
+function cardCount() {
+	var numTotalCards = document.querySelectorAll('.bookmark-card').length;
+	var numReadCards = document.querySelectorAll('.read').length;
+	var numUnreadCards = numTotalCards - numReadCards;
+}
+
+function cardCountDisplay() {
+	// var section = document.querySelector('.homestar');
+	// var left = document.querySelector('.left');
+	// var homestar = document.querySelector('.homestar');
+	// var bookmarkCard = document.createElement('article');
+	// bookmarkCard.classList.add('bookmark-card')
+	// bookmarkCard.style.setProperty('display', 'block')
+	// bookmarkCard.innerHTML = document.querySelector('.bookmark-card').innerHTML;
+
+	var homestar = document.querySelector('.homestar');
+	var cardCountDisplay = document.createElement('table')
+	var
+	cardCountDisplay.innerHTML =
+	<tr class="total-cards">
+		<td class="key total">Total Bookmarks</td>
+		<td class="value total"></td>
+	</tr>
+	<tr class="read-cards">
+		<td class="key read-cards">Read</td>
+		<td class="value read-cards-value"></td>
+	</tr>
+	<tr class="unread-cards">
+		<td class="key unread">Unread</td>
+		<td class="value unread"></td>
+	</tr>
+}
+// cardCount();
+
 //Event Listeners
 
-document.querySelector('#input-form').addEventListener('input', function() {	
+document.querySelector('#input-form').addEventListener('input', function() {
 	enableButton();
 });
 
@@ -86,6 +120,7 @@ document.querySelector('#input-form').addEventListener('submit', function(e) {
 	newCard();
 	clearFields();
 	enableButton();
+	cardCount();
 });
 
 
@@ -108,7 +143,7 @@ document.querySelector('#right').addEventListener('click', function(event) {
 				left.classList.add('left-onload');
 
 
-
+				cardCount();
 			}
 		}, 800)
 	}
@@ -117,6 +152,5 @@ document.querySelector('#right').addEventListener('click', function(event) {
 		event.target.parentNode.classList.toggle('read');
 		event.target.classList.toggle('read-button-clicked');
 	}
-
+	cardCount();
 })
-
