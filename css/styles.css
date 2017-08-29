@@ -118,8 +118,9 @@ h5:hover {
 }
 
 .bookmark-fade {
-  transition: all 800ms ease;
+  
   opacity: 1 !important;
+  transition: all 800ms ease;
 }
 
 
