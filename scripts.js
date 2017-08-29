@@ -49,7 +49,7 @@ document.querySelector('#input-form').addEventListener('submit', function(e) {
 
 document.querySelector('#right').addEventListener('click', function(event) {
 	if (event.target.matches('h5.delete-button')) {
-		event.target.parentNode.remove(child);
+		event.target.parentNode.remove();
 	}
 
 	if (event.target.matches('h5.read-button')) {

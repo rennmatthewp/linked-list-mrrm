@@ -82,7 +82,8 @@ a, h5 {
   font-weight: 400;
 }
 
-a:hover, h5:hover {
+a:hover, 
+h5:hover {
   color: #455A64;
   font-weight: 800;
   text-decoration: underline #FFC107;
@@ -120,8 +121,13 @@ a:hover, h5:hover {
 
 .read {
   background-color: #F2F4F4;
+}
+
+.read a, 
+.read .delete-button {
   text-decoration: underline #CFD8DC;
 }
+
 
 #left {
   width: 49.56%;
