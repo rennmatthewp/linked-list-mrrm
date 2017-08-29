@@ -161,6 +161,7 @@ h5:hover {
   width: 50%;
   opacity: 0;
   transition: all 500ms ease;
+  overflow: scroll;
 }
 
 #input-submit {
@@ -188,17 +189,28 @@ h5:hover {
 }
 
 @media (max-width: 935px) {
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  h1 img {
+    width: 41px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
   section {
     height: 100%;
   }
   input {
     max-width: 100%;
+    margin: 19px 0;
   }
  .homestar, .homestar-onload{
     transform: translateX(0);
     position: static;
     display: block;
-    margin: 30px auto;
+    margin: 0 auto;
     width: 100%;
 
   } 
