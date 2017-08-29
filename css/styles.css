@@ -36,6 +36,7 @@ h3 {
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 10px;
+  overflow-wrap: break-word;
 }
 
 
@@ -103,7 +104,15 @@ h5:hover {
   display: none;
   margin: 23px 17px;
   padding: 10px 15px 7px;
+  opacity: 0;
+  transition: all 800ms ease;
 }
+
+.bookmark-fade {
+  transition: all 800ms ease;
+  opacity: 1 !important;
+}
+
 
 .delete-button {
   float: right;
@@ -137,6 +146,8 @@ h5:hover {
   background-color: #CFD8DC;
   vertical-align: top;
   width: 50%;
+  opacity: 0;
+  transition: all 500ms ease;
 }
 
 #input-submit {

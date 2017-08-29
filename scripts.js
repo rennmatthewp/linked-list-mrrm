@@ -18,6 +18,17 @@ function newCard() {
 	bookmarkCard.innerHTML = document.querySelector('.bookmark-card').innerHTML;
 	fillCard(bookmarkCard);
 	section.appendChild(bookmarkCard);
+
+	if (document.querySelectorAll('.bookmark-card').length > 2) {
+		setTimeout(function() {
+			bookmarkCard.classList.add('bookmark-fade');
+		}, 10)
+	} else {
+		section.classList.add('bookmark-fade');
+		setTimeout(function() {
+			bookmarkCard.classList.add('bookmark-fade');
+		}, 500)
+	}
 }
 
 function enableButton() {
@@ -48,8 +59,16 @@ document.querySelector('#input-form').addEventListener('submit', function(e) {
 });
 
 document.querySelector('#right').addEventListener('click', function(event) {
+	var section = document.querySelector('#right');
+
 	if (event.target.matches('h5.delete-button')) {
-		event.target.parentNode.remove();
+		event.target.parentNode.classList.remove('bookmark-fade');
+		setTimeout(function() {
+			event.target.parentNode.remove();
+			if (document.querySelectorAll('.bookmark-card').length < 2) {
+				section.classList.remove('bookmark-fade');
+			}
+		}, 800)
 	}
 
 	if (event.target.matches('h5.read-button')) {
