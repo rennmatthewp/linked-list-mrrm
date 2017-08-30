@@ -83,7 +83,7 @@ a, h5 {
   font-weight: 400;
 }
 
-a:hover, 
+a:hover,
 h5:hover {
   color: #455A64;
   font-weight: 800;
@@ -105,7 +105,7 @@ h5:hover {
   z-index: 1;
   transform: translateX(50%);
   transition: all 800ms ease;
-} 
+}
 
 .bookmark-card {
   background-color: #FFF;
@@ -140,7 +140,7 @@ h5:hover {
   background-color: #F2F4F4;
 }
 
-.read a, 
+.read a,
 .read .delete-button {
   text-decoration: underline #CFD8DC;
 }
@@ -152,6 +152,30 @@ h5:hover {
 
 .left-onload {
   width: 100%;
+}
+
+.card-count-display {
+  float: right;
+  font-size: 24px;
+  text-align: right;
+  margin: 20px 0;
+  border-spacing: 15px;
+  border-collapse: separate;
+  background-color: #CFD8DC;
+  /*display: none;*/
+}
+
+.total-cards {
+  color: #455A64;
+}
+
+.read-cards {
+  color: #F05A28;
+}
+
+.unread-cards {
+  color: #EB7B00;
+
 }
 
 #right {
@@ -212,7 +236,7 @@ h5:hover {
     margin: 0 auto;
     width: 100%;
 
-  } 
+  }
   .left, .left-onload {
     width: 100%;
   }

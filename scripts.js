@@ -30,15 +30,16 @@ function newCard() {
 	if (document.querySelectorAll('.bookmark-card').length < 3) {
 
 	setTimeout(function() {
-		
-		if (document.querySelectorAll('.bookmark-card').length > 2) {
-			setTimeout(function() {
-				bookmarkCard.classList.add('bookmark-fade');
-			}, 10)
-		} else {
-			section.classList.add('bookmark-fade');
-			setTimeout(function() {
-				bookmarkCard.classList.add('bookmark-fade');
+
+	if (document.querySelectorAll('.bookmark-card').length > 2) {
+		setTimeout(function() {
+			bookmarkCard.classList.add('bookmark-fade');
+		}, 10)
+	} else {
+		section.classList.add('bookmark-fade');
+		setTimeout(function() {
+			bookmarkCard.classList.add('bookmark-fade');
+
 
 			}, 200)
 		}
@@ -77,9 +78,25 @@ function clearFields() {
 	document.querySelector('#input-url').value = '';
 }
 
+// function cardCount(display) {
+// 	var numTotalCards = document.querySelectorAll('.bookmark-card').length;
+// 	var numReadCards = document.querySelectorAll('.read').length;
+// 	var numUnreadCards = numTotalCards - numReadCards;
+// }
+
+function cardCountDisplay() {
+	var numTotalCards = document.querySelectorAll('.bookmark-card').length - 1;
+	var numReadCards = document.querySelectorAll('.read').length;
+	var numUnreadCards = numTotalCards - numReadCards -1;
+	var homestar = document.querySelector('.homestar');
+	var cardCountDisplay = document.createElement('table')
+	cardCountDisplay.innerHTML = document.querySelector('.card-count-display')
+	
+}
+
 //Event Listeners
 
-document.querySelector('#input-form').addEventListener('input', function() {	
+document.querySelector('#input-form').addEventListener('input', function() {
 	enableButton();
 });
 
@@ -88,6 +105,7 @@ document.querySelector('#input-form').addEventListener('submit', function(e) {
 	newCard();
 	clearFields();
 	enableButton();
+	cardCountDisplay();
 });
 
 
@@ -105,6 +123,9 @@ document.querySelector('#right').addEventListener('click', function(event) {
 				section.classList.remove('bookmark-fade');
 				homestar.classList.add('homestar-onload');
 				left.classList.add('left-onload');
+
+
+				cardCountDisplay();
 			}
 		}, 800)
 	}
@@ -113,6 +134,5 @@ document.querySelector('#right').addEventListener('click', function(event) {
 		event.target.parentNode.classList.toggle('read');
 		event.target.classList.toggle('read-button-clicked');
 	}
-
+	cardCountDisplay();
 })
-
