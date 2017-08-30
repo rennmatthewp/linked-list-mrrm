@@ -100,7 +100,7 @@ h5:hover {
 }
 
 .homestar-onload {
-  top: 30%;
+  top: 29%;
   position: relative;
   z-index: 1;
   transform: translateX(50%);
@@ -118,11 +118,9 @@ h5:hover {
 }
 
 .bookmark-fade {
-  
   opacity: 1 !important;
   transition: all 800ms ease;
 }
-
 
 .delete-button {
   float: right;
