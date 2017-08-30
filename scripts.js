@@ -31,32 +31,34 @@ function newCard() {
 
 	setTimeout(function() {
 		
-	if (document.querySelectorAll('.bookmark-card').length > 2) {
-		setTimeout(function() {
-			bookmarkCard.classList.add('bookmark-fade');
-		}, 10)
-	} else {
-		section.classList.add('bookmark-fade');
-		setTimeout(function() {
-			bookmarkCard.classList.add('bookmark-fade');
+		if (document.querySelectorAll('.bookmark-card').length > 2) {
+			setTimeout(function() {
+				bookmarkCard.classList.add('bookmark-fade');
+			}, 10)
+		} else {
+			section.classList.add('bookmark-fade');
+			setTimeout(function() {
+				bookmarkCard.classList.add('bookmark-fade');
 
-		}, 200)
-	}
+			}, 200)
+		}
 
 	}, 500)
 
 	} else {
-		if (document.querySelectorAll('.bookmark-card').length > 2) {
-		setTimeout(function() {
-			bookmarkCard.classList.add('bookmark-fade');
-		}, 10)
-	} else {
-		section.classList.add('bookmark-fade');
-		setTimeout(function() {
-			bookmarkCard.classList.add('bookmark-fade');
 
-		}, 200)
-	}
+		if (document.querySelectorAll('.bookmark-card').length > 2) {
+			setTimeout(function() {
+				bookmarkCard.classList.add('bookmark-fade');
+
+			}, 10)
+		} else {
+			section.classList.add('bookmark-fade');
+			setTimeout(function() {
+				bookmarkCard.classList.add('bookmark-fade');
+
+			}, 200)
+		}
 	}
 
 }
@@ -89,8 +91,6 @@ document.querySelector('#input-form').addEventListener('submit', function(e) {
 });
 
 
-
-
 document.querySelector('#right').addEventListener('click', function(event) {
 	var section = document.querySelector('#right');
 	var left = document.querySelector('.left');
@@ -103,12 +103,8 @@ document.querySelector('#right').addEventListener('click', function(event) {
 			event.target.parentNode.remove();
 			if (document.querySelectorAll('.bookmark-card').length < 2) {
 				section.classList.remove('bookmark-fade');
-
 				homestar.classList.add('homestar-onload');
 				left.classList.add('left-onload');
-
-
-
 			}
 		}, 800)
 	}
