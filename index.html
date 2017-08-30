@@ -15,12 +15,12 @@
           <h1>Linked<img src="assets/linked-list-logo.svg" alt="linked list logo">List</h1>
           <form id="input-form" class="" method="post">
             <fieldset>
-              <input id="input-title" class="homestar-input" type="text" name="" value="" placeholder="Website Title" required>
-              <input id="input-url" class="homestar-input" type="url" name="" value="" placeholder="Website URL" required>
+              <input id="input-title" class="homestar-input" type="text" name="" value="" placeholder="Website Title" required autofocus>
+              <input id="input-url" class="homestar-input" type="url" placeholder="Website URL" required>
               <button id="input-submit" type="submit" name="button" disabled>Enter</button>
             </fieldset>
           </form>
-          <table class="card-count-display counter-onload">
+          <table class="card-count-display card-count-display-onload">
             <tr class="total-cards">
               <td>Total Bookmarks</td>
               <td class="total-value">0</td>
@@ -34,8 +34,7 @@
               <td class="unread-value">0</td>
             </tr>
           </table>
-          <button class="clear-read-button" disabled>Clear Read Bookmarks
-
+          <button class="clear-read-button clear-read-button-onload">Clear Read Bookmarks
           </button>
         </article>
       </section>
@@ -48,9 +47,6 @@
           <h5 class="read-button">Read</h5>
           <h5 class="delete-button">Delete</h5>
         </article>
-
-
-
       </section>
     </main>
     <script type="text/javascript" src="scripts.js"></script>

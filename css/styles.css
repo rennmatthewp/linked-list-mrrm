@@ -122,6 +122,10 @@ h5:hover {
   transition: all 800ms ease;
 }
 
+.height-adjust {
+  height: 100vh !important;
+}
+
 .delete-button {
   float: right;
 }
@@ -154,6 +158,7 @@ h5:hover {
   width: 100%;
 }
 
+
 .card-count-display {
   font-size: 24px;
   text-align: right;
@@ -164,10 +169,34 @@ h5:hover {
   opacity: 1;
   transition: all 800ms ease;
   width: 251px;
-
 }
 
-.counter-onload {
+.card-count-display-onload {
+  opacity: 0;
+  transition: all 800ms ease;
+}
+
+.clear-read-button {
+  background-color: #F05A28;
+  font-size: 16px;
+  width: 251px;
+  padding: 5px;
+  color: #fff;
+  display: block;
+  margin: 5px auto 0;
+  border: none;
+  opacity: 1;
+  font-weight: 800;
+  transition: all 500ms ease;
+  
+}
+
+.clear-read-button:hover {
+  background-color: #F69C7E;
+  transition: all 500ms ease;
+}
+
+.clear-read-button-onload {
   opacity: 0;
   transition: all 800ms ease;
 }
@@ -184,23 +213,6 @@ h5:hover {
   color: #EB7B00;
 }
 
-.clear-read-button {
-  background-color: #F05A28;
-  font-size: 16px;
-  width: 251px;
-  padding: 5px;
-  color: #fff;
-  display: block;
-  margin: 5px auto 0;
-  border: none;
-  font-weight: 800;
-  transition: all 500ms ease;
-}
-
-.clear-read-button:hover {
-  background-color: #F69C7E;
-  transition: all 500ms ease;
-}
 
 #right {
   background-color: #CFD8DC;
@@ -209,6 +221,7 @@ h5:hover {
   opacity: 0;
   transition: all 500ms ease;
   overflow: scroll;
+  height: 0;
 }
 
 #input-submit {
@@ -234,7 +247,6 @@ h5:hover {
   color: rgba(255,255,255, .3);
   transition: all 500ms ease;
 }
-
 
 @media (max-width: 935px) {
   h1 {
