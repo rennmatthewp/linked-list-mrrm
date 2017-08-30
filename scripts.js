@@ -14,12 +14,14 @@ function newCard() {
 	var section = document.querySelector('#right');
 	var left = document.querySelector('.left');
 	var homestar = document.querySelector('.homestar');
+	var counterTable = document.querySelector('.card-count-display');
 	var bookmarkCard = document.createElement('article');
 	bookmarkCard.classList.add('bookmark-card')
 	bookmarkCard.style.setProperty('display', 'block')
 	bookmarkCard.innerHTML = document.querySelector('.bookmark-card').innerHTML;
 	fillCard(bookmarkCard);
 
+	counterTable.classList.remove('counter-onload');
 
 	homestar.classList.remove('homestar-onload');
 	left.classList.remove('left-onload');
@@ -124,8 +126,6 @@ document.querySelector('#right').addEventListener('click', function(event) {
 				section.classList.remove('bookmark-fade');
 				homestar.classList.add('homestar-onload');
 				left.classList.add('left-onload');
-
-
 			}
 		}, 800)
 	}
