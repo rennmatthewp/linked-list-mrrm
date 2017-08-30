@@ -78,20 +78,20 @@ function clearFields() {
 	document.querySelector('#input-url').value = '';
 }
 
-// function cardCount(display) {
-// 	var numTotalCards = document.querySelectorAll('.bookmark-card').length;
-// 	var numReadCards = document.querySelectorAll('.read').length;
-// 	var numUnreadCards = numTotalCards - numReadCards;
-// }
-
 function cardCountDisplay() {
 	var numTotalCards = document.querySelectorAll('.bookmark-card').length - 1;
 	var numReadCards = document.querySelectorAll('.read').length;
-	var numUnreadCards = numTotalCards - numReadCards -1;
+	var numUnreadCards = numTotalCards - numReadCards;
 	var homestar = document.querySelector('.homestar');
 	var cardCountDisplay = document.createElement('table')
 	cardCountDisplay.innerHTML = document.querySelector('.card-count-display')
-	
+	updateCardCount(numTotalCards, numReadCards, numUnreadCards);
+}
+
+function updateCardCount(total, read, unread) {
+	document.querySelector('.total-value').innerText = total;
+	document.querySelector('.read-value').innerText = read;
+	document.querySelector('.unread-value').innerText = unread;
 }
 
 //Event Listeners
@@ -119,13 +119,13 @@ document.querySelector('#right').addEventListener('click', function(event) {
 		event.target.parentNode.classList.remove('bookmark-fade');
 		setTimeout(function() {
 			event.target.parentNode.remove();
+			cardCountDisplay();
 			if (document.querySelectorAll('.bookmark-card').length < 2) {
 				section.classList.remove('bookmark-fade');
 				homestar.classList.add('homestar-onload');
 				left.classList.add('left-onload');
 
 
-				cardCountDisplay();
 			}
 		}, 800)
 	}
