@@ -1,5 +1,21 @@
 //Functions
 
+function backToOnload() {
+	var section = document.querySelector('#right');
+	var left = document.querySelector('.left');
+	var homestar = document.querySelector('.homestar');
+	var counterTable = document.querySelector('.card-count-display');
+	var clearReadButton = document.querySelector('.clear-read-button')
+	if (document.querySelectorAll('.bookmark-card').length < 2) {
+		
+		homestar.classList.add('homestar-onload');
+		left.classList.add('left-onload');
+		counterTable.classList.add('card-count-display-onload');
+		clearReadButton.classList.add('clear-read-button-onload');
+		section.classList.remove('bookmark-fade', 'height-adjust');
+	}
+}
+
 function fillCard(bookmarkCardObject) {
 	var title = document.querySelector('#input-title');
 	var url = document.querySelector('#input-url');
@@ -16,12 +32,16 @@ function newCard() {
 	var homestar = document.querySelector('.homestar');
 	var counterTable = document.querySelector('.card-count-display');
 	var bookmarkCard = document.createElement('article');
+	var clearReadButton = document.querySelector('.clear-read-button');
+
 	bookmarkCard.classList.add('bookmark-card')
 	bookmarkCard.style.setProperty('display', 'block')
 	bookmarkCard.innerHTML = document.querySelector('.bookmark-card').innerHTML;
 	fillCard(bookmarkCard);
 
-	counterTable.classList.remove('counter-onload');
+	counterTable.classList.remove('card-count-display-onload');
+	clearReadButton.classList.remove('clear-read-button-onload');
+
 
 	homestar.classList.remove('homestar-onload');
 	left.classList.remove('left-onload');
@@ -31,35 +51,28 @@ function newCard() {
 
 	if (document.querySelectorAll('.bookmark-card').length < 3) {
 
-	setTimeout(function() {
-
-	if (document.querySelectorAll('.bookmark-card').length > 2) {
 		setTimeout(function() {
-			bookmarkCard.classList.add('bookmark-fade');
-		}, 10)
+
+			if (document.querySelectorAll('.bookmark-card').length > 2) {
+				setTimeout(function() {
+					bookmarkCard.classList.add('bookmark-fade');
+				}, 10)
+			} else {
+				section.classList.add('bookmark-fade', 'height-adjust');
+				setTimeout(function() {
+					bookmarkCard.classList.add('bookmark-fade');
+				}, 200)
+			}
+		}, 500)
 	} else {
-		section.classList.add('bookmark-fade');
-		setTimeout(function() {
-			bookmarkCard.classList.add('bookmark-fade');
-
-
-			}, 200)
-		}
-
-	}, 500)
-
-	} else {
-
 		if (document.querySelectorAll('.bookmark-card').length > 2) {
 			setTimeout(function() {
 				bookmarkCard.classList.add('bookmark-fade');
-
 			}, 10)
 		} else {
-			section.classList.add('bookmark-fade');
+			section.classList.add('bookmark-fade', 'height-adjust');
 			setTimeout(function() {
 				bookmarkCard.classList.add('bookmark-fade');
-
 			}, 200)
 		}
 	}
@@ -96,9 +109,18 @@ function updateCardCount(total, read, unread) {
 	document.querySelector('.unread-value').innerText = unread;
 }
 
-function clearReadBookmarks () {
+function clearReadBookmarks(event) {
 	var readBookmarks = document.querySelectorAll('.read');
-	console.log(readBookmarks);
+		for (var i = 0; i < readBookmarks.length; i++) {
+			readBookmarks[i].classList.remove('bookmark-fade');
+		}
+	setTimeout(function() {
+		for (var i = 0; i < readBookmarks.length; i++) {
+			readBookmarks[i].remove();
+			cardCountDisplay();
+			backToOnload();
+		}
+	}, 800);
 }
 
 //Event Listeners
@@ -116,11 +138,14 @@ document.querySelector('#input-form').addEventListener('submit', function(e) {
 });
 
 
+
+
 document.querySelector('#right').addEventListener('click', function(event) {
 	var section = document.querySelector('#right');
 	var left = document.querySelector('.left');
 	var homestar = document.querySelector('.homestar');
 	var counterTable = document.querySelector('.card-count-display');
+	var clearReadButton = document.querySelector('.clear-read-button')
 
 	if (event.target.matches('h5.delete-button')) {
 
@@ -128,12 +153,7 @@ document.querySelector('#right').addEventListener('click', function(event) {
 		setTimeout(function() {
 			event.target.parentNode.remove();
 			cardCountDisplay();
-			if (document.querySelectorAll('.bookmark-card').length < 2) {
-				section.classList.remove('bookmark-fade');
-				homestar.classList.add('homestar-onload');
-				left.classList.add('left-onload');
-				counterTable.classList.add('counter-onload');
-			}
+			backToOnload();
 		}, 800)
 	}
 
@@ -145,4 +165,26 @@ document.querySelector('#right').addEventListener('click', function(event) {
 })
 
 
-document.querySelector('main').addEventListener('click', clearReadBookmarks)
+
+
+
+
+document.querySelector('.clear-read-button').addEventListener('click', function() {
+	clearReadBookmarks();
+});
+
+document.querySelector('#input-url').addEventListener('focus', function() {
+	addURL();
+})
+
+function addURL() {
+	var urlFocus = document.querySelector('#input-url');
+	urlFocus.value = 'http://';
+}
+
+
+
+
+
+
+
