@@ -115,6 +115,7 @@ document.querySelector('#right').addEventListener('click', function(event) {
 	var section = document.querySelector('#right');
 	var left = document.querySelector('.left');
 	var homestar = document.querySelector('.homestar');
+	var counterTable = document.querySelector('.card-count-display');
 
 	if (event.target.matches('h5.delete-button')) {
 
@@ -126,6 +127,7 @@ document.querySelector('#right').addEventListener('click', function(event) {
 				section.classList.remove('bookmark-fade');
 				homestar.classList.add('homestar-onload');
 				left.classList.add('left-onload');
+				counterTable.classList.add('counter-onload');
 			}
 		}, 800)
 	}
