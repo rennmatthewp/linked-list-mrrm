@@ -96,6 +96,11 @@ function updateCardCount(total, read, unread) {
 	document.querySelector('.unread-value').innerText = unread;
 }
 
+function clearReadBookmarks () {
+	var readBookmarks = document.querySelectorAll('.read');
+	console.log(readBookmarks);
+}
+
 //Event Listeners
 
 document.querySelector('#input-form').addEventListener('input', function() {
@@ -138,3 +143,6 @@ document.querySelector('#right').addEventListener('click', function(event) {
 	}
 	cardCountDisplay();
 })
+
+
+document.querySelector('main').addEventListener('click', clearReadBookmarks)
