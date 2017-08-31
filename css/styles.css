@@ -39,13 +39,12 @@ h3 {
   overflow-wrap: break-word;
 }
 
-
 h5 {
   color: #455A64;
+  cursor: pointer;
   display: inline-block;
   font-size: 14px;
   font-weight: 400;
-  cursor: pointer;
 }
 
 hr {
@@ -66,7 +65,6 @@ input::placeholder {
   letter-spacing: 1.5px;
 }
 
-
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px #FFF inset;
 }
@@ -79,8 +77,8 @@ a {
 
 a, h5 {
   color: #607D8B;
-  text-decoration: underline #F2F4F4;
   font-weight: 400;
+  text-decoration: underline #F2F4F4;
 }
 
 a:hover,
@@ -93,18 +91,18 @@ h5:hover {
 .homestar {
   padding: 20px;
   position: absolute;
-  top: 50%;
   transform: translateY(-50%);
-  width: 468px;
+  top: 50%;
   transition: all 800ms ease;
+  width: 468px;
 }
 
 .homestar-onload {
-  top: 20%;
   position: relative;
-  z-index: 1;
+  top: 20%;
   transform: translateX(50%);
   transition: all 800ms ease;
+  z-index: 1;
 }
 
 .bookmark-card {
@@ -149,7 +147,6 @@ h5:hover {
   text-decoration: underline #CFD8DC;
 }
 
-
 .left {
   width: 49.56%;
 }
@@ -158,15 +155,14 @@ h5:hover {
   width: 100%;
 }
 
-
 .card-count-display {
-  font-size: 24px;
-  text-align: right;
-  margin: 50px auto 0;
-  border-spacing: 15px;
-  border-collapse: separate;
   background-color: #CFD8DC;
+  border-collapse: separate;
+  border-spacing: 15px;
+  font-size: 24px;
+  margin: 50px auto 0;
   opacity: 1;
+  text-align: right;
   transition: all 800ms ease;
   width: 251px;
 }
@@ -178,16 +174,16 @@ h5:hover {
 
 .clear-read-button {
   background-color: #F05A28;
-  font-size: 16px;
-  width: 251px;
-  padding: 5px;
+  border: none;
   color: #fff;
   display: block;
-  margin: 5px auto 0;
-  border: none;
-  opacity: 1;
+  font-size: 16px;
   font-weight: 800;
+  margin: 5px auto 0;
+  opacity: 1;
+  padding: 5px;
   transition: all 500ms ease;
+  width: 251px;
 
 }
 
@@ -213,28 +209,27 @@ h5:hover {
   color: #EB7B00;
 }
 
-
 #right {
   background-color: #CFD8DC;
+  height: 0;
+  opacity: 0;
+  overflow: scroll;
+  transition: all 500ms ease;
   vertical-align: top;
   width: 50%;
-  opacity: 0;
-  transition: all 500ms ease;
-  overflow: scroll;
-  height: 0;
 }
 
 #input-submit {
   background-color: #FFC107;
-  color: rgba(255,255,255, 1);
   border: none;
+  color: rgba(255,255,255, 1);
+  cursor: pointer;
   display: block;
   font-size: 16px;
   font-weight: 800;
   padding: 8px;
-  width: 100%;
   transition: all 500ms ease;
-  cursor: pointer;
+  width: 100%;
 }
 
 #input-submit:hover {
@@ -249,48 +244,52 @@ h5:hover {
 }
 
 @media (max-width: 935px) {
+
   h1 {
     font-size: 24px;
     text-align: center;
   }
+
   h1 img {
-    width: 41px;
     margin-left: 5px;
     margin-right: 5px;
+    width: 41px;
   }
 
   section {
     height: 100%;
   }
+
   input {
-    max-width: 100%;
     margin: 19px 0;
+    max-width: 100%;
   }
+
  .homestar, .homestar-onload{
-    transform: translateX(0);
-    position: static;
     display: block;
     margin: 0 auto;
+    position: static;
+    transform: translateX(0);
     width: 100%;
 
   }
   .left, .left-onload {
     width: 100%;
   }
+
   #right {
-    width: 100%;
     background-color: #CFD8DC;
+    width: 100%;
   }
 
   .card-count-display {
+    border-spacing: 10px;
     font-size: 18px;
     margin: 15px auto 10px;
     width: 200px;
-    border-spacing: 10px;
   }
 
   .clear-read-button {
     width: 200px;
   }
-
 }
