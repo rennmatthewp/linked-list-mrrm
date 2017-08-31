@@ -31,26 +31,6 @@ h1 img {
   width: 95px;
 }
 
-h3 {
-  color: #455A64;
-  font-size: 24px;
-  font-weight: 800;
-  margin-bottom: 10px;
-  overflow-wrap: break-word;
-}
-
-h5 {
-  color: #455A64;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-hr {
-  color: #CFD8DC;
-}
-
 input {
   color: #666;
   display: block;
@@ -66,13 +46,34 @@ input::placeholder {
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px #FFF inset;
+  -webkit-box-shadow: 0 0 0 30px #FFF inset;
+}
+
+h3 {
+  color: #455A64;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+}
+
+
+hr {
+  color: #CFD8DC;
 }
 
 a {
   display: block;
   margin: 20px 0;
   overflow-wrap: break-word;
+}
+
+h5 {
+  color: #455A64;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 a, h5 {
@@ -277,11 +278,6 @@ h5:hover {
     width: 100%;
   }
 
-  #right {
-    background-color: #CFD8DC;
-    width: 100%;
-  }
-
   .card-count-display {
     border-spacing: 10px;
     font-size: 18px;
@@ -291,5 +287,10 @@ h5:hover {
 
   .clear-read-button {
     width: 200px;
+  }
+
+  #right {
+    background-color: #CFD8DC;
+    width: 100%;
   }
 }
