@@ -22,11 +22,6 @@ function fillCard(bookmarkCardObject) {
 	bookmarkURL.setAttribute('href', url.value);
 }
 
-function clearFields() {
-	document.querySelector('#input-title').value = '';
-	document.querySelector('#input-url').value = '';
-}
-
 function newCard() {
 	var section = document.querySelector('#right');
 	var left = document.querySelector('.left');
@@ -68,6 +63,11 @@ function newCard() {
 			}, 200)
 		}
 	}
+}
+
+function clearFields() {
+	document.querySelector('#input-title').value = '';
+	document.querySelector('#input-url').value = '';
 }
 
 function cardCountDisplay() {
