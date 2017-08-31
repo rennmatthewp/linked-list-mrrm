@@ -8,43 +8,61 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
   </head>
+
   <body>
     <main>
       <section class="left left-onload">
         <article class="homestar homestar-onload">
           <h1>Linked<img src="assets/linked-list-logo.svg" alt="linked list logo">List</h1>
+
           <form id="input-form" class="" method="post">
             <fieldset>
+
               <input id="input-title" class="homestar-input" type="text" name="" value="" placeholder="Website Title" required autofocus>
+
               <input id="input-url" class="homestar-input" type="url" placeholder="Website URL" required>
+
               <button id="input-submit" type="submit" name="button" disabled>Enter</button>
             </fieldset>
           </form>
+
           <table class="card-count-display card-count-display-onload">
             <tr class="total-cards">
               <td>Total Bookmarks</td>
+
               <td class="total-value">0</td>
             </tr>
+
             <tr class="read-cards">
               <td>Read</td>
+
               <td class="read-value">0</td>
             </tr>
+
             <tr class="unread-cards">
               <td>Unread</td>
+
               <td class="unread-value">0</td>
             </tr>
           </table>
-          <button class="clear-read-button clear-read-button-onload">Clear Read Bookmarks
-          </button>
+
+          <button class="clear-read-button clear-read-button-onload">Clear Read Bookmarks</button>
         </article>
       </section>
+
       <section id="right">
+
         <article class="bookmark-card bookmark-fade">
           <h3 class="bookmark-title">The Website Title</h3>
+
           <hr>
+
           <a type="url" class="bookmark-url" href="#">www.thewebsiteurl.com</a>
+
           <hr>
+
           <h5 class="read-button">Read</h5>
+
           <h5 class="delete-button">Delete</h5>
         </article>
       </section>
