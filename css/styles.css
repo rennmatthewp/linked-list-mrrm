@@ -188,7 +188,7 @@ h5:hover {
   opacity: 1;
   font-weight: 800;
   transition: all 500ms ease;
-  
+
 }
 
 .clear-read-button:hover {
@@ -283,7 +283,14 @@ h5:hover {
   }
 
   .card-count-display {
-    margin: 19px auto 19px;
+    font-size: 18px;
+    margin: 15px auto 10px;
+    width: 200px;
+    border-spacing: 10px;
+  }
+
+  .clear-read-button {
+    width: 200px;
   }
 
 }
